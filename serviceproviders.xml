@@ -3828,6 +3828,7 @@ conceived.
 	<provider>
 		<name>Telia</name>
 		<gsm>
+			<network-id mcc="238" mnc="20"/>
 			<network-id mcc="238" mnc="30"/>
 
 			<voicemail>28184000</voicemail>
