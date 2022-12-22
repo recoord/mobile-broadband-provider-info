@@ -7666,15 +7666,10 @@ conceived.
 			<network-id mcc="440" mnc="87"/>
 			<network-id mcc="440" mnc="99"/>
 
-			<apn value="mopera.ne.jp">
+			<apn value="spmode.ne.jp">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>mopera</name>
-			</apn>
-			<apn value="mopera.net">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>mopera U</name>
+				<name>spmode</name>
 			</apn>
 		</gsm>
 	</provider>
