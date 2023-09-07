@@ -13229,33 +13229,10 @@ conceived.
 				<destination-number>94183567</destination-number>
 			</visual-voicemail>
 			<!-- http://www.wireless.att.com/answer-center/main.jsp?solutionId=35078&t=solutionTab -->
-			<apn value="wap.cingular">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>MEdia Net (phones)</name>
-			</apn>
-			<apn value="Broadband">
+			<apn value="m2m.com.attz">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>LaptopConnect (data cards)</name>
-			</apn>
-			<apn value="isp.cingular">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>Data Connect (old)</name>
-			</apn>
-			<apn value="pta">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>LTE</name>
-			</apn>
-			<apn value="wap.cingular">
-				<usage type="mms"/>
-				<name>AT&amp;T MMS</name>
-				<username>WAP@CINGULARGPRS.COM</username>
-				<password>CINGULAR1</password>
-				<mmsc>http://mmsc.cingular.com</mmsc>
-				<mmsproxy>wireless.cingular.com:80</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
