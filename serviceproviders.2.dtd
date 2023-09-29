@@ -1,7 +1,7 @@
 <!ELEMENT serviceproviders (country*)>
 <!ATTLIST serviceproviders format CDATA #REQUIRED>
 
-<!ELEMENT country (provider*)>
+<!ELEMENT country (name+, provider*)>
 <!ATTLIST country code CDATA #REQUIRED>
 
 <!ELEMENT provider (name+, gsm?, cdma?)>
@@ -21,7 +21,8 @@
                authentication?,
                dns*,
                mmsc?,
-               mmsproxy?)>
+               mmsproxy?,
+               mmsattachmentsize?)>
 <!ATTLIST apn value CDATA #REQUIRED>
 
 <!ELEMENT msisdn-query (ussd*, sms*)>
@@ -37,9 +38,12 @@
                             carrier-prefix?)>
 
 <!ELEMENT standard EMPTY>
-<!ATTLIST standard type (cvvm|otmp|proprietary) #REQUIRED>
-<!-- Whether the carrier supports OTMP or CVVM for Visual Voicemail
-     Some carriers impliment their own proprietary standard.
+<!ATTLIST standard type (cvvm|otmp|vvm3|proprietary|ios) #REQUIRED>
+<!-- Whether the carrier supports OTMP, CVVM, or VVM3 for Visual Voicemail
+     Some carriers implement their own proprietary standard, or the standard
+     for iOS.
+     More information about all standards can be found here:
+     https://gitlab.com/kop316/vvmplayer/-/wikis/Visual-Voicemail-Standards
 -->
 
 <!ELEMENT destination-number (#PCDATA)>
@@ -121,7 +125,7 @@
 <!ATTLIST plan type (prepaid|postpaid) #REQUIRED>
 
 <!ELEMENT usage EMPTY>
-<!ATTLIST usage type (internet|mms|wap|ia) #REQUIRED>
+<!ATTLIST usage type (internet|mms|wap|ia|mms-internet-hipri|mms-internet-hipri-fota) #REQUIRED>
 
 <!ELEMENT cdma (name*,
                 username?,
@@ -141,3 +145,6 @@
 
 <!-- MMS Center URL -->
 <!ELEMENT mmsc (#PCDATA)>
+
+<!-- Maximum Size an MMS can be, in bytes -->
+<!ELEMENT mmsattachmentsize (#PCDATA)>
