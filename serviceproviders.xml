@@ -4275,35 +4275,12 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Másmovil</name>
-		<gsm>
-			<network-id mcc="214" mnc="03"/>
-			<apn value="internetmas">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
 		<name>móbil R (Mundo-R)</name>
 		<gsm>
 			<network-id mcc="214" mnc="17"/>
 			<apn value="internet.mundo-r.com">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<!-- http://www.happymovil.es/es/prepago/internet-movil -->
-		<name>Happy Móvil/moviData</name>
-		<gsm>
-			<network-id mcc="214" mnc="03"/>
-			<apn value="INTERNETTPH">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<dns>213.143.33.8</dns>
-				<dns>62.36.225.150</dns>
 			</apn>
 		</gsm>
 	</provider>
@@ -4332,29 +4309,6 @@ conceived.
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>Pepephone (Mobile)</name>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>Orange</name>
-		<gsm>
-			<network-id mcc="214" mnc="03"/>
-			<network-id mcc="214" mnc="09"/>
-
-			<voicemail>242</voicemail>
-			<balance-check>
-				<ussd>*111#</ussd>
-				<ussd>*113#</ussd>
-			</balance-check>
-
-			<apn value="internet">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>Orange</name>
-				<username>ORANGE</username>
-				<password>ORANGE</password>
-				<dns>85.62.229.133</dns>
-				<dns>85.62.229.134</dns>
 			</apn>
 		</gsm>
 	</provider>
@@ -4519,25 +4473,13 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<!-- from http://www.llamayamovil.com/internet -->
-		<name>LlamaYa móvil</name>
-		<gsm>
-			<network-id mcc="214" mnc="03"/>
-			<apn value="moreinternet">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<!-- MVNO operating on Orange's network -->
-		<!-- www.amena.com -->
-		<name>Amena</name>
+		<name>Orange Internet Móvil</name>
 		<gsm>
 			<network-id mcc="214" mnc="03"/>
 			<apn value="orangeworld">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
+				<authentication method="pap"/>
 				<username>orange</username>
 				<password>orange</password>
 			</apn>
