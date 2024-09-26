@@ -13229,32 +13229,9 @@ conceived.
 				<carrier-prefix>//VVM</carrier-prefix>
 			</visual-voicemail>
 			<!-- Assignments taken from https://www.att.com/support/article/wireless/KM1062162/ -->
-			<apn value="NXTGENPHONE">
-				<usage type="mms-internet-hipri"/>
-				<name>NXTGENPHONE</name>
-				<gateway>proxy.mobile.att.net:80</gateway>
-				<mmsc>http://mmsc.mobile.att.net</mmsc>
-				<mmsproxy>proxy.mobile.att.net:80</mmsproxy>
-			</apn>
-			<apn value="ENHANCEDPHONE">
-				<usage type="mms-internet-hipri"/>
-				<name>ENHANCEDPHONE</name>
-				<mmsc>http://mmsc.mobile.att.net</mmsc>
-				<mmsproxy>proxy.mobile.att.net:80</mmsproxy>
-			</apn>
-			<apn value="NRPHONE">
-				<usage type="mms-internet-hipri-fota"/>
-				<name>NRPHONE</name>
-			</apn>
 			<apn value="broadband">
-				<usage type="mms-internet-hipri-fota"/>
+				<usage type="internet"/>
 				<name>ATT Broadband</name>
-			</apn>
-			<apn value="RESELLER">
-				<usage type="mms-internet-hipri"/>
-				<name>RESELLER</name>
-				<mmsc>http://mmsc.mobile.att.net</mmsc>
-				<mmsproxy>proxy.mobile.att.net:80</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
