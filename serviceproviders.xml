@@ -414,14 +414,12 @@ conceived.
 			<network-id mcc="722" mnc="310"/>
 			<network-id mcc="722" mnc="320"/>
 			<network-id mcc="722" mnc="330"/>
-			<apn value="gprs.claro.com.ar">
+			<apn value="igprs.claro.com.ar">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>3G Internet</name>
-				<username>clarogprs</username>
-				<password>clarogprs999</password>
-				<dns>170.51.255.100</dns>
-				<dns>170.51.242.18</dns>
+				<name>Claro AR</name>
+				<username></username>
+				<password></password>
 			</apn>
 			<apn value="internet.ctimovil.com.ar">
 				<plan type="postpaid"/>
@@ -465,6 +463,13 @@ conceived.
 
 <country code="at">
 	<name>Austria</name>
+	<emergency-numbers>
+		<emergency-number number="112">
+			<callee type="ambulance"/>
+			<callee type="fire-brigade"/>
+			<callee type="police"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>A1/Telekom Austria</name>
 		<gsm>
@@ -596,6 +601,16 @@ conceived.
 				<username>lmat</username>
 				<password>plus</password>
 				<mmsc>http://lyca.mmsmvno.com/mms/wapenc</mmsc>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Spusu</name>
+		<gsm>
+			<network-id mcc="232" mnc="17"/>
+			<apn value="web">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
 			</apn>
 		</gsm>
 	</provider>
@@ -1504,6 +1519,13 @@ conceived.
 
 <country code="be">
 	<name>Belgium</name>
+	<emergency-numbers>
+		<emergency-number number="112">
+			<callee type="ambulance"/>
+			<callee type="police"/>
+			<callee type="fire-brigade"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>Lycamobile</name>
 		<gsm>
@@ -2317,14 +2339,6 @@ conceived.
 		<name>Rogers</name>
 		<gsm>
 			<network-id mcc="302" mnc="720"/>
-			<apn value="internet.com">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<username>wapuser1</username>
-				<password>wap</password>
-				<dns>207.181.101.4</dns>
-				<dns>207.181.101.5</dns>
-			</apn>
 			<apn value="ltemobile.apn">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
@@ -2335,13 +2349,13 @@ conceived.
 				<usage type="internet"/>
 				<name>Rogers Tethering</name>
 			</apn>
-			<apn value="media.com">
+			<apn value="ltedata.apn">
 				<usage type="mms"/>
-				<name>Rogers Media</name>
-				<username>media</username>
-				<password>mda01</password>
+				<name>Rogers MMS</name>
+				<username></username>
+				<password></password>
 				<mmsc>http://mms.gprs.rogers.com</mmsc>
-				<mmsproxy>10.128.1.69:80</mmsproxy>
+				<mmsproxy>mmsproxy.rogers.com</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -2576,6 +2590,17 @@ conceived.
 
 <country code="ch">
 	<name>Switzerland</name>
+	<emergency-numbers>
+		<emergency-number number="114">
+			<callee type="ambulance"/>
+		</emergency-number>
+		<emergency-number number="117">
+			<callee type="police"/>
+		</emergency-number>
+		<emergency-number number="118">
+			<callee type="fire-brigade"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>Lycamobile</name>
 		<gsm>
@@ -3250,6 +3275,49 @@ conceived.
 
 <country code="de">
 	<name>Germany</name>
+	<cbs>
+		<!-- MoWaS-Warnmeldungen der „Warnstufe 1, hoch“ -->
+		<level type="presidential">
+			<channels start="4370" end="4370"/>
+			<channels start="4383" end="4383"/>
+			<!-- Per DE-Alert -->
+			<channels start="919" end="919"/>
+		</level>
+		<!-- MoWaS-Warnmeldungen der „Warnstufe 2, mittel“ -->
+		<level type="extreme">
+			<channels start="4371" end="4371"/>
+			<channels start="4384" end="4384"/>
+			<channels start="4385" end="4385"/>
+		</level>
+		<level type="severe">
+			<channels start="4373" end="4378"/>
+			<channels start="4386" end="4391"/>
+		</level>
+		<!-- MoWaS-Warnmeldungen der „Warnstufe 3, niedrig“ -->
+		<level type="public-safety">
+			<channels start="4396" end="4396"/>
+			<channels start="4397" end="4397"/>
+		</level>
+		<level type="amber">
+			<channels start="4379" end="4379"/>
+			<channels start="4392" end="4392"/>
+		</level>
+		<level type="test">
+			<!-- EU monthly test -->
+			<channels start="4380" end="4380"/>
+			<!-- EU test -->
+			<channels start="4382" end="4382"/>
+			<!-- EU exercise -->
+			<channels start="4381" end="4381"/>
+		</level>
+	</cbs>
+	<emergency-numbers>
+		<emergency-number number="112">
+			<callee type="police"/>
+			<callee type="ambulance"/>
+			<callee type="fire-brigade"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>AldiTalk/MedionMobile</name>
 		<gsm>
@@ -3314,9 +3382,9 @@ conceived.
 	<provider>
 		<name>Bild Mobil</name>
 		<gsm>
-			<!-- http://www.bildmobil.de/info_handyeinstellungen.html -->
+			<!-- https://www.bildmobil.de/APN.html -->
 			<network-id mcc="262" mnc="02"/>
-			<apn value="access.vodafone.de">
+			<apn value="web.vodafone.de">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>BILD Mobilportal</name>
@@ -3521,14 +3589,24 @@ conceived.
 			<balance-top-up>
 				<ussd replacement="CODE">*101*CODE#</ussd>
 			</balance-top-up>
-			<apn value="internet.t-mobile">
+			<apn value="internet.telekom">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
 				<name>Prepaid Contracts</name>
-				<username>t-mobile</username>
-				<password>tm</password>
+				<username>congstar</username>
+				<password>cs</password>
 				<dns>193.254.160.1</dns>
 				<dns>10.74.83.22</dns>
+			</apn>
+			<!-- https://forum.congstar.de/thread/46325-mobil-surfen-mit-congstar-manuelle-einstellungen-zum-mobilen-internet-apn/ !-->
+			<apn value="internet.telekom">
+				<plan type="prepaid"/>
+				<usage type="mms"/>
+				<name>Congstar MMS</name>
+				<username>telekom</username>
+				<password>telekom</password>
+				<mmsc>https://www.mms.telekon.de/OTP/</mmsc>
+				<mmsproxy>109.231.176.193:8008</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -3607,6 +3685,20 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<name>sipgate</name>
+		<gsm>
+			<network-id mcc="262" mnc="03"/> <!-- this value is listed in the sipgate forum, presuambly an MVNO of this provider!-->
+			<network-id mcc="262" mnc="33"/>
+			<apn value="sipgate">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>sipgate</name>
+				<username>sipgate</username>
+				<password>sipgate</password>
+		</apn>
+	</gsm>
+	</provider>
+	<provider>
 		<name>Alice</name>
 		<gsm>
 			<network-id mcc="262" mnc="07"/>
@@ -3643,6 +3735,25 @@ conceived.
 				<name>Mobile Web</name>
 				<username>D2</username>
 				<password>Web</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Willkommen</name>
+		<gsm>
+			<!-- Vodafone network -->
+			<network-id mcc="262" mnc="02"/>
+			<network-id mcc="262" mnc="23"/>
+
+			<voicemail>5500</voicemail>
+			<balance-check>
+				<ussd>*100#</ussd>
+			</balance-check>
+
+			<apn value="web.vodafone.de">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
+				<name>Mobile Broadband</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -3856,6 +3967,19 @@ conceived.
 				<name>Telia MMS</name>
 				<mmsc>http://mms.telia.dk</mmsc>
 				<mmsproxy>193.209.134.131:8080</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Telia IOT</name>
+		<gsm>
+			<network-id mcc="238" mnc="20"/>
+			<balance-check>
+				<ussd>*101#</ussd>
+			</balance-check>
+			<apn value="www.internet.mtelia.dk">
+				<plan type="postpaid"/>
+				<usage type="internet"/>
 			</apn>
 		</gsm>
 	</provider>
@@ -4806,6 +4930,11 @@ conceived.
 			<network-id mcc="208" mnc="21"/>
 
 			<voicemail>660</voicemail>
+			<visual-voicemail>
+				<standard type="vvm3"/>
+				<destination-number>22344</destination-number>
+				<carrier-prefix>//VVM</carrier-prefix>
+			</visual-voicemail>
 			<balance-check>
 				<dtmf>630</dtmf>
 			</balance-check>
@@ -5283,6 +5412,7 @@ conceived.
 		<name>Superdrug</name>
 		<gsm>
 			<network-id mcc="234" mnc="20"/>
+			<voicemail>123</voicemail>
 			<apn value="superdrug.net">
 				<usage type="internet"/>
 			</apn>
@@ -5441,6 +5571,32 @@ conceived.
 				<password>wap</password>
 				<mmsc>http://mms.asdamobiles.co.uk/servlets/mms</mmsc>
 				<mmsproxy>212.183.137.12:8799</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider primary="false">
+		<!-- https://www.1pmobile.com/ask-penny/?help=data-and-internet -->
+		<name>1pMobile</name>
+		<gsm>
+			<!-- 1pMobile is MVNO with same MCC/MNC as EE -->
+			<network-id mcc="234" mnc="30"/>
+			<balance-check>
+				<dtmf>150</dtmf>
+			</balance-check>
+			<apn value="data.uk">
+				<plan type="prepaid"/>
+				<usage type="internet"/>
+				<name>1pMobile</name>
+				<username>user</username>
+				<password>one2one</password>
+			</apn>
+			<apn value="data.uk">
+				<usage type="mms"/>
+				<name>1pMobile</name>
+				<username>user</username>
+				<password>one2one</password>
+				<mmsc>http://mms/</mmsc>
+				<mmsproxy>149.254.201.135:8080</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
@@ -6559,6 +6715,35 @@ conceived.
 
 <country code="il">
 	<name>Israel</name>
+	<cbs>
+		<level type="presidential">
+			<!-- 919 Hebrew, 920 English, 921 Russian, 922 Arabic -->
+			<channels start="919" end="922"/>
+			<!-- Future use per 2014 document -->
+			<channels start="923" end="928"/>
+		</level>
+		<level type="extreme">
+			<channels start="4370" end="4370"/>
+		</level>
+		<level type="severe">
+			<channels start="4371" end="4372"/>
+		</level>
+		<level type="public-safety">
+			<!-- technically declared as information -->
+			<channels start="4373" end="4378"/>
+		</level>
+		<level type="amber">
+			<channels start="4379" end="4379"/>
+		</level>
+		<level type="test">
+			<!-- general system test -->
+			<channels start="4380" end="4380"/>
+			<!-- training -->
+			<channels start="4381" end="4381"/>
+			<!-- future use -->
+			<channels start="4382" end="4382"/>
+		</level>
+	</cbs>
 	<provider>
 		<name>CellCom</name>
 		<gsm>
@@ -7319,6 +7504,15 @@ conceived.
 		<name>Iliad</name>
 		<gsm>
 			<network-id mcc="222" mnc="50"/>
+			<voicemail>401</voicemail>
+			<visual-voicemail>
+				<standard type="ios"/>
+				<destination-number>2050</destination-number>
+				<carrier-prefix>//VVM</carrier-prefix>
+			</visual-voicemail>
+			<balance-check>
+				<sms text="Credito">400</sms>
+			</balance-check>
 			<apn value="iliad">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
@@ -7443,6 +7637,15 @@ conceived.
 
 <country code="jp">
 	<name>Japan</name>
+	<emergency-numbers>
+		<emergency-number number="119">
+			<callee type="ambulance"/>
+			<callee type="fire-brigade"/>
+		</emergency-number>
+		<emergency-number number="110">
+			<callee type="police"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>Softbank Mobile</name>
 		<gsm>
@@ -7675,6 +7878,17 @@ conceived.
 				<username>mineo@k-opti.com</username>
 				<password>mineo</password>
 				<authentication method="chap"/>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- MVNO operating on au(KDDI) network -->
+		<name>povo</name>
+		<gsm>
+			<network-id mcc="440" mnc="51"/>
+			<apn value="povo.jp">
+				<usage type="internet"/>
+				<name>povo</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -8437,19 +8651,12 @@ conceived.
 		<name>Tango</name>
 		<gsm>
 			<network-id mcc="270" mnc="77"/>
-			<apn value="hspa">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>hspa</name>
-				<username>tango</username>
-				<password>tango</password>
-			</apn>
 			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
 				<name>internet</name>
-				<username>tango</username>
-				<password>tango</password>
+				<username></username>
+				<password></password>
 				<dns>212.66.70.3</dns>
 				<dns>212.66.75.7</dns>
 			</apn>
@@ -9548,6 +9755,39 @@ conceived.
 
 <country code="nl">
 	<name>Netherlands</name>
+	<cbs>
+		<level type="presidential">
+			<channels start="4370" end="4370"/>
+			<channels start="4383" end="4383"/>
+			<!-- legacy block -->
+			<channels start="919" end="919"/>
+		</level>
+		<level type="extreme">
+			<channels start="4371" end="4371"/>
+			<channels start="4384" end="4384"/>
+			<channels start="4385" end="4385"/>
+		</level>
+		<level type="severe">
+			<channels start="4373" end="4378"/>
+			<channels start="4386" end="4391"/>
+		</level>
+		<level type="public-safety">
+			<channels start="4396" end="4396"/>
+			<channels start="4397" end="4397"/>
+		</level>
+		<level type="amber">
+			<channels start="4379" end="4379"/>
+			<channels start="4392" end="4392"/>
+		</level>
+		<level type="test">
+			<!-- EU monthly test -->
+			<channels start="4380" end="4380"/>
+			<!-- EU test -->
+			<channels start="4382" end="4382"/>
+			<!-- EU exercise -->
+			<channels start="4381" end="4381"/>
+		</level>
+	</cbs>
 	<provider>
 		<name>Hi</name>
 		<gsm>
@@ -10886,69 +11126,33 @@ conceived.
 <country code="pt">
 	<name>Portugal</name>
 	<provider>
-		<name>Kanguru</name>
+		<name>NOS</name>
 		<gsm>
 			<network-id mcc="268" mnc="03"/>
-			<apn value="kanguru-portatil">
+			<voicemail>133</voicemail>
+			<balance-check>
+				<ussd>*111#</ussd>
+			</balance-check>
+			<apn value="utms">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>Portable</name>
-				<name xml:lang="pt">Portátil</name>
-				<dns>62.169.67.172</dns>
-				<dns>62.169.67.171</dns>
+				<name>NOS / WTF Pós-Pago (internet)</name>
 			</apn>
-			<apn value="kanguru-tempo">
+			<apn value="utms">
 				<plan type="prepaid"/>
 				<usage type="internet"/>
-				<name>Tempo (Prepaid)</name>
-				<dns>62.169.67.172</dns>
-				<dns>62.169.67.171</dns>
+				<name>NOS / WTF Pré-Pago (internet)</name>
 			</apn>
-			<apn value="kangurufixo">
+			<apn value="myconnection">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>Fixo</name>
-				<dns>62.169.67.172</dns>
-				<dns>62.169.67.171</dns>
-			</apn>
-			<apn value="noapn">
-				<name>Apn dinâmico (no apn)</name>
-				<dns>62.169.67.172</dns>
-				<dns>62.169.67.171</dns>
+				<name>NOS Kanguru Net Móvel (internet)</name>
 			</apn>
 			<apn value="umts">
 				<usage type="mms"/>
-				<name>Optimus MMS</name>
+				<name>NOS (MMS)</name>
 				<mmsc>http://mmsc:10021/mmsc</mmsc>
 				<mmsproxy>62.169.66.5:8799</mmsproxy>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<!-- Merged with Optimus in 2010 -->
-		<name>Clix</name>
-		<gsm>
-			<network-id mcc="268" mnc="03"/>
-			<apn value="clixinternetmovel">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
-		<name>Optimus</name>
-		<gsm>
-			<network-id mcc="268" mnc="03"/>
-			<apn value="umts">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>3G</name>
-			</apn>
-			<apn value="internet">
-				<plan type="postpaid"/>
-				<usage type="internet"/>
-				<name>GPRS</name>
-				<dns>194.79.69.129</dns>
 			</apn>
 		</gsm>
 	</provider>
@@ -10956,6 +11160,7 @@ conceived.
 		<name>Lycamobile</name>
 		<gsm>
 			<network-id mcc="268" mnc="04"/>
+			<voicemail>200</voicemail>
 			<balance-check>
 				<ussd>*123#</ussd>
 			</balance-check>
@@ -10971,32 +11176,24 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>TMN</name>
+		<name>MEO</name>
 		<gsm>
 			<network-id mcc="268" mnc="06"/>
+			<voicemail>200</voicemail>
+			<balance-check>
+				<ussd>*#123#</ussd>
+			</balance-check>
 			<apn value="internet">
+				<plan type="prepaid"/>
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>Tmn Internet</name>
-				<username>tmn</username>
-				<password>tmn</password>
+				<name>MEO (Internet)</name>
 				<dns>88.214.178.1</dns>
 				<dns>88.214.182.2</dns>
 			</apn>
 			<apn value="mmsc.tmn.pt">
-				<plan type="postpaid"/>
 				<usage type="mms"/>
-				<name>Tmn Mms</name>
-				<username>tmn</username>
-				<password>tmnnet</password>
-				<dns>194.65.3.20</dns>
-				<dns>194.65.3.21</dns>
-			</apn>
-			<apn value="mmsc.tmn.pt">
-				<usage type="mms"/>
-				<name>MMSgprs</name>
-				<username>tmn</username>
-				<password>tmnnet</password>
+				<name>MEO (MMS)</name>
 				<mmsc>http://mmsc/</mmsc>
 				<mmsproxy>10.111.2.16:8080</mmsproxy>
 			</apn>
@@ -11006,51 +11203,56 @@ conceived.
 		<name>Vodafone</name>
 		<gsm>
 			<network-id mcc="268" mnc="01"/>
+			<voicemail>123</voicemail>
+			<balance-check>
+				<ussd>*#123#</ussd>
+			</balance-check>
 			<apn value="internet.vodafone.pt">
 				<plan type="postpaid"/>
+				<plan type="prepaid"/>
 				<usage type="internet"/>
 				<username>vodafone</username>
 				<password>vodafone</password>
-				<dns>212.18.160.133</dns>
-				<dns>212.18.160.134</dns>
 			</apn>
 			<apn value="net2.vodafone.pt">
+				<plan type="prepaid"/>
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>Vodafone Internet</name>
+				<name>Vodafone / Yorn (Internet)</name>
+				<username>vodafone</username>
+				<password>vodafone</password>
 			</apn>
-			<apn value="vas.vodafone.pt">
-				<plan type="postpaid"/>
+			<apn value="net2.vodafone.pt">
 				<usage type="mms"/>
-				<name>Vodafone MMS</name>
-				<username>vas</username>
-				<password>vas</password>
+				<name>Vodafone / Yorn (MMS)</name>
+				<username>vodafone</username>
+				<password>vodafone</password>
+				<mmsc>http://mms.vodafone.pt/servlets/mms</mmsc>
+				<mmsproxy>iproxy.vodafone.pt:80</mmsproxy>
 			</apn>
 		</gsm>
 	</provider>
 	<provider>
-		<name>ZON</name>
+		<name>Digi PT</name>
 		<gsm>
-			<network-id mcc="268" mnc="01"/>
-			<apn value="internet.zon.pt">
+			<network-id mcc="268" mnc="02"/>
+			<apn value="internet">
 				<plan type="postpaid"/>
 				<usage type="internet"/>
-				<name>Dados Móveis</name>
+				<name>Digi.mobil</name>
+				<authentication method="pap"/>
 			</apn>
-			<apn value="vas.zon.pt">
+		</gsm>
+	</provider>
+	<provider>
+		<name>LigaT</name>
+		<gsm>
+			<network-id mcc="268" mnc="07"/>
+			<voicemail>200</voicemail>
+			<apn value="inet">
 				<plan type="postpaid"/>
-				<usage type="mms"/>
-				<name>MMS</name>
-				<username>vas</username>
-				<password>vas</password>
-			</apn>
-			<apn value="vas.zon.pt">
-				<usage type="mms"/>
-				<name>ZON MMS</name>
-				<username>vas</username>
-				<password>vas</password>
-				<mmsc>http://mms/servlets/mms</mmsc>
-				<mmsproxy>213.30.27.63:8799</mmsproxy>
+				<usage type="internet"/>
+				<name>LigaT (Internet)</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -12725,6 +12927,15 @@ conceived.
 
 <country code="tw">
 	<name>Taiwan</name>
+	<emergency-numbers>
+		<emergency-number number="119">
+			<callee type="ambulance"/>
+			<callee type="fire-brigade"/>
+		</emergency-number>
+		<emergency-number number="110">
+			<callee type="police"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>Chunghwa Telecom (emome)</name>
 		<name xml:lang="zh">中華電信 (emome)</name>
@@ -13191,6 +13402,8 @@ conceived.
 			<apn value="internet">
 				<usage type="internet"/>
 				<name>internet</name>
+				<username>internet</username>
+				<password>internet</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -13198,6 +13411,30 @@ conceived.
 
 <country code="us">
 	<name>United States</name>
+	<cbs>
+		<level type="presidential">
+			<channels start="4370" end="4370"/>
+		</level>
+		<level type="extreme">
+			<channels start="4371" end="4372"/>
+		</level>
+		<level type="severe">
+			<channels start="4373" end="4378"/>
+		</level>
+		<level type="public-safety">
+			<channels start="4397" end="4397"/>
+		</level>
+		<level type="amber">
+			<channels start="4379" end="4379"/>
+		</level>
+	</cbs>
+	<emergency-numbers>
+		<emergency-number number="911">
+			<callee type="police"/>
+			<callee type="ambulance"/>
+			<callee type="fire-brigade"/>
+		</emergency-number>
+	</emergency-numbers>
 	<provider>
 		<name>AT&amp;T</name>
 		<gsm>
@@ -13280,7 +13517,7 @@ conceived.
 			<voicemail>123</voicemail>
 			<visual-voicemail>
 				<standard type="cvvm"/>
-				<destination-number>127</destination-number>
+				<destination-number>122</destination-number>
 				<carrier-prefix>//VVM</carrier-prefix>
 			</visual-voicemail>
 			<apn value="fast.t-mobile.com">
@@ -13334,6 +13571,40 @@ conceived.
 				<username>cbw</username>
 				<mmsc>http://mms.gocbw.com:8088/mms</mmsc>
 				<mmsproxy>216.68.79.202:80</mmsproxy>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>FirstNet</name>
+		<gsm>
+			<network-id mcc="312" mnc="670"/>
+			<network-id mcc="313" mnc="100"/>
+			<network-id mcc="313" mnc="110"/>
+			<network-id mcc="313" mnc="120"/>
+			<network-id mcc="313" mnc="130"/>
+			<network-id mcc="313" mnc="140"/>
+			<network-id mcc="313" mnc="150"/>
+			<network-id mcc="313" mnc="150"/>
+			<network-id mcc="313" mnc="160"/>
+			<network-id mcc="313" mnc="170"/>
+			<network-id mcc="313" mnc="180"/>
+			<network-id mcc="313" mnc="190"/>
+			<voicemail>+17249209990</voicemail>
+			<visual-voicemail>
+				<standard type="ios"/>
+				<destination-number>94183567</destination-number>
+				<carrier-prefix>//VVM</carrier-prefix>
+			</visual-voicemail>
+			<apn value="firstnet-phone">
+				<usage type="mms-internet-hipri"/>
+				<name>firstnet-phone</name>
+				<gateway>proxy.mobile.att.net:80</gateway>
+				<mmsc>http://mmsc.mobile.att.net</mmsc>
+				<mmsproxy>proxy.mobile.att.net:80</mmsproxy>
+			</apn>
+			<apn value="firstnet-broadband">
+				<usage type="mms-internet-hipri"/>
+				<name>firstnet-broadband</name>
 			</apn>
 		</gsm>
 	</provider>
